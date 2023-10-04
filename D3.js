@@ -113,8 +113,6 @@ const characters = [];
   Come risultato dovresti ottenere qualcosa di simile: ["Luke Skywalker", "C-3PO", "R2-D2", etc..]
 */
 
-console.log(starWarsCharacters[0].name);
-
 for (let i = 0; i < starWarsCharacters.length; i++) {
   let characters = [];
   characters.push(starWarsCharacters[i].name);
@@ -141,11 +139,11 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
 */
 
 const eyeColor = {
-  blue: "",
-  yellow: "",
-  brown: "",
-  red: "",
-  "blue-gray": "",
+  blue: [],
+  yellow: [],
+  brown: [],
+  red: [],
+  "blue-gray": [],
 };
 
 /* ESERCIZIO 5
@@ -153,37 +151,36 @@ const eyeColor = {
   Ogni personaggio dovrà finire nell'array corrispondente al suo colore degli occhi (al valore della sua proprietà "eye_color").
 */
 
-switch (true) {
-  case "blue":
-    for (let i = 0; i < starWarsCharacters.length; i++) {
-      if (starWarsCharacters[i].eye_color === "blue")
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  let character = starWarsCharacters[i];
+  const eyeColorKey = character.eye_color;
+  switch (eyeColorKey) {
+    case "blue":
+      {
         eyeColor.blue.push(starWarsCharacters[i]);
-    }
-    break;
-  case "yellow":
-    for (let i = 0; i < starWarsCharacters.length; i++) {
-      if (starWarsCharacters[i].eye_color === "yellow")
+      }
+      break;
+    case "yellow":
+      {
         eyeColor.yellow.push(starWarsCharacters[i]);
-    }
-    break;
-  case "brown":
-    for (let i = 0; i < starWarsCharacters.length; i++) {
-      if (starWarsCharacters[i].eye_color === "brown")
+      }
+      break;
+    case "brown":
+      {
         eyeColor.brown.push(starWarsCharacters[i]);
-    }
-    break;
-  case "red":
-    for (let i = 0; i < starWarsCharacters.length; i++) {
-      if (starWarsCharacters[i].eye_color === "red")
+      }
+      break;
+    case "red":
+      {
         eyeColor.red.push(starWarsCharacters[i]);
-    }
-    break;
-  case "blue-gray":
-    for (let i = 0; i < starWarsCharacters.length; i++) {
-      if (starWarsCharacters[i].eye_color === "blue-gray")
+      }
+      break;
+    case "blue-gray":
+      {
         eyeColor["blue-gray"].push(starWarsCharacters[i]);
-    }
-    break;
+      }
+      break;
+  }
 }
 console.log(eyeColor);
 
